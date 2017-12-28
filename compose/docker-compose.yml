@@ -6,7 +6,7 @@ services:
         build: 
             dockerfile: ./docker/nginx.dockerfile
             context: .
-        image: paulosalgado/nginx
+        image: paulosalgado/curso-alura-nginx
         container_name: nginx
         ports: 
             - "80:80"
@@ -26,7 +26,7 @@ services:
         build: 
             dockerfile: ./docker/alura-books.dockerfile
             context: .
-        image: paulosalgado/alura-books
+        image: paulosalgado/curso-alura-books
         container_name: alura-books-1
         ports: 
             - "3000"
@@ -36,7 +36,7 @@ services:
             - "mongodb"
 
     node2: 
-        image: paulosalgado/alura-books
+        image: paulosalgado/curso-alura-books
         container_name: alura-books-2
         ports: 
             - "3000"
@@ -47,7 +47,7 @@ services:
             - "mongodb"
 
     node3: 
-        image: paulosalgado/alura-books
+        image: paulosalgado/curso-alura-books
         container_name: alura-books-3
         ports: 
             - "3000"
